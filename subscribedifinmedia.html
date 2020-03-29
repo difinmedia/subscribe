@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+<title></title>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,300i,500,500i,700,900' rel='stylesheet' type='text/css'/>
+<style type='text/css'>
+body{background:#fff;color:#555555;text-transform:uppercase;font-family:Roboto,Arial,sans-serif;font-size:100%;text-align:left;margin:0}
+a:link{text-decoration:none}
+#loginblog .btn-info{margin:0 0 0 20px;}
+.blog-admin a.btn-danger{margin: 0 0px 0 20px;z-index: 2;position: absolute;top: 4px;right: 0;}
+.post #innerlogin,.blog-admin{display:none}
+#innerlogin{display:inline-block;}
+a.btn-danger,a.btn-info,a.btn-primary,a.btn-success,a.btn-warning{color:#fff!important}
+.btn,.btn:active{background-image:none}
+.btn{font-weight:400}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:5px;font-size:14px;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;border-radius:4px}
+.btn:active:focus,.btn:focus{outline:0}
+.btn:focus,.btn:hover{color:#333;text-decoration:none;outline:0}
+.btn:active{outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}
+.btn-info{color:#fff!important;background-color:#5bc0de;border-color:#46b8da}
+.btn-info:focus{color:#fff;background-color:#31b0d5;border-color:#1b6d85}
+.btn-info:active,.btn-info:hover{color:#fff;background-color:#31b0d5;border-color:#269abc}
+.btn-danger{color:#fff!important;background-color:#d9534f;border-color:#d43f3a}
+.btn-danger:focus{color:#fff;background-color:#c9302c;border-color:#761c19}
+.btn-danger:active,.btn-danger:hover{color:#fff;background-color:#c9302c;border-color:#ac2925}
+.btn-xs{font-size:12px;line-height:1.5;border-radius:3px;padding:1px 5px}
+#gSignIn,#gSignIn>div{margin:0 auto}
+#gSignIn{width:100%}
+.log_in .profile{background:#fff;border:1px solid #ccc;border-color:rgba(0,0,0,.2);color:#000;-webkit-box-shadow:0 2px 10px rgba(0,0,0,.2);box-shadow:0 2px 10px rgba(0,0,0,.2);outline:0;overflow:hidden;-webkit-border-radius:2px;border-radius:2px;padding:10px;margin:10px auto 0;width:350px;height:auto;text-align:left}
+.log_in .profile p{margin:0}
+.log_in .profile p.button_login{margin:10px 0 0}
+.log_in .head{margin-bottom:10px}
+.log_in .head a{float:right}
+.log_in .profile img{width:100px;float:left;margin:0 10px 10px 0}
+.log_in .proDetails{float:left}
+.log_in h3{margin:0 auto 40px}
+.login_box{}
+.log_in{width:100%;}
+.log_in .tombol_close{color:#efefef;position:absolute;top:10px;right:10px;font-family:Arial;font-size:40px;font-weight:lighter;width:20px;height:20px;line-height:20px;text-align:center;text-decoration:none;}
+
+@media screen and (max-width:414px){
+.log_in .profile{width:90%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.log_in .proDetails{font-size:12px!important;line-height:1.1}
+.log_in .profile img{width:60px;}
+}
+@media screen and (max-width:375px){
+.abcRioButton{width:100%!important;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.abcRioButtonContents{font-size:14px!important}
+.log_in .profile img{width:40px;}
+}
+@media screen and (max-width:320px){
+.log_in .proDetails{font-size:10px!important;line-height:1.1}
+}
+#ignielSubscribe {width:500px; height:auto; background-color:#eee; border:1px solid #ddd; border-radius:7.5px; display:block; margin:auto; line-height:40px; padding:0px}
+#ignielSubscribe .email__ {padding:15px 15px 5px;}
+#ignielSubscribe .email {margin:auto; color:#555; text-align:center;}
+#ignielSubscribe .email:before {content:''; width:50px; height:50px; display:block; text-align:center; margin:auto; border-radius:100px; transition:all .3s ease; -webkit-animation:ignielRing 5s 0s ease-in-out infinite; -webkit-transform-origin:50% 4px; -moz-animation:ignielRing 5s 0s ease-in-out infinite; -moz-transform-origin:50% 4px; animation:ignielRing 5s 0s ease-in-out infinite; transform-origin:50% 4px; background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z' fill='%23008c5f'/%3E%3C/svg%3E") center center / 50px no-repeat;}
+#ignielSubscribe .medsos__ {padding:15px 0px; line-height:0px; border-top:1px solid #ccc;}
+#ignielSubscribe form {display:-webkit-box; display:-webkit-flex; display:-moz-box; display:-ms-flexbox; display:flex; flex-wrap:nowrap; align-items:center; margin:0px 0px 15px; padding:0px; position:relative;}
+#ignielSubscribe form:before {left:15px; position:absolute; display:block; width:20px; height:20px; background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z' fill='%23717171'/%3E%3C/svg%3E") no-repeat; content:'';}
+#ignielSubscribe input {width: calc(100% - 35px); background-color:#ccc; line-height:1.5em; border:1px solid #ccc; border-right:0px; padding:8px 10px 8px 40px; font-size:12px; text-align:left !important; border-radius:50px 0px 0px 50px; outline:none; outline-width:0px; box-shadow:none; -moz-box-shadow:none; -webkit-box-shadow:none;}
+#ignielSubscribe button {background-color:#008c5f; width:40px; min-width:40px; height:36px; margin:0px; padding:0px; border:0px; box-shadow:none; vertical-align:top; cursor:pointer; transition:all .3s ease; background-image:unset; border-radius:0px 50px 50px 0px;}
+#ignielSubscribe button:hover, #ignielSubscribe button:focus {background-color:var(--color-hover);}
+#ignielSubscribe button:before {display:inline-block; width:20px; height:20px; margin:0px; background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2,21L23,12L2,3V10L17,12L2,14V21Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat; content:''; vertical-align:-3px;}
+#ignielSubscribe .medsos {width:100%; text-align:center;}
+#ignielSubscribe .medsos svg {width:20px;height:20px;margin-top:7px}
+#ignielSubscribe .medsos svg path {fill:#fff}
+#ignielSubscribe .medsos a {display:inline-block; margin-right:7px; width:35px; height:35px; box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.4); transition: all ease-in-out 300ms; border-radius:100px;}
+#ignielSubscribe .medsos a:last-child {margin-right:0px;}
+#ignielSubscribe .medsos a:hover {box-shadow: 0px 23px 15px -3px rgba(0,0,0,0.25); transform: translate(0px, -10px) scale(1.05);}
+#ignielSubscribe .medsos .facebook{background:#3a579a}
+#ignielSubscribe .medsos .twitter {background:#00abf0}
+#ignielSubscribe .medsos .googleplus {background:#df4a32}
+#ignielSubscribe .medsos .youtube {background:#cc181e}
+#ignielSubscribe .medsos .instagram {background:#992ebc}
+#ignielSubscribe .medsos .pinterest {background:#e60023}
+@-webkit-keyframes ignielRing{
+0% { -webkit-transform: rotateZ(0); }
+1% { -webkit-transform: rotateZ(30deg); }
+3% { -webkit-transform: rotateZ(-28deg); }
+5% { -webkit-transform: rotateZ(34deg); }
+7% { -webkit-transform: rotateZ(-32deg); }
+9% { -webkit-transform: rotateZ(30deg); }
+11% { -webkit-transform: rotateZ(-28deg); }
+13% { -webkit-transform: rotateZ(26deg); }
+15% { -webkit-transform: rotateZ(-24deg); }
+17% { -webkit-transform: rotateZ(22deg); }
+19% { -webkit-transform: rotateZ(-20deg); }
+21% { -webkit-transform: rotateZ(18deg); }
+23% { -webkit-transform: rotateZ(-16deg); }
+25% { -webkit-transform: rotateZ(14deg); }
+27% { -webkit-transform: rotateZ(-12deg); }
+29% { -webkit-transform: rotateZ(10deg); }
+31% { -webkit-transform: rotateZ(-8deg); }
+33% { -webkit-transform: rotateZ(6deg); }
+35% { -webkit-transform: rotateZ(-4deg); }
+37% { -webkit-transform: rotateZ(2deg); }
+39% { -webkit-transform: rotateZ(-1deg); }
+41% { -webkit-transform: rotateZ(1deg); }
+43% { -webkit-transform: rotateZ(0); }
+100% { -webkit-transform: rotateZ(0); }
+}
+@-moz-keyframes ignielRing{
+0% { -moz-transform: rotate(0); }
+1% { -moz-transform: rotate(30deg); }
+3% { -moz-transform: rotate(-28deg); }
+5% { -moz-transform: rotate(34deg); }
+7% { -moz-transform: rotate(-32deg); }
+9% { -moz-transform: rotate(30deg); }
+11% { -moz-transform: rotate(-28deg); }
+13% { -moz-transform: rotate(26deg); }
+15% { -moz-transform: rotate(-24deg); }
+17% { -moz-transform: rotate(22deg); }
+19% { -moz-transform: rotate(-20deg); }
+21% { -moz-transform: rotate(18deg); }
+23% { -moz-transform: rotate(-16deg); }
+25% { -moz-transform: rotate(14deg); }
+27% { -moz-transform: rotate(-12deg); }
+29% { -moz-transform: rotate(10deg); }
+31% { -moz-transform: rotate(-8deg); }
+33% { -moz-transform: rotate(6deg); }
+35% { -moz-transform: rotate(-4deg); }
+37% { -moz-transform: rotate(2deg); }
+39% { -moz-transform: rotate(-1deg); }
+41% { -moz-transform: rotate(1deg); }
+43% { -moz-transform: rotate(0); }
+100% { -moz-transform: rotate(0); }
+}
+@keyframes ignielRing{
+0% { transform: rotate(0); }
+1% { transform: rotate(30deg); }
+3% { transform: rotate(-28deg); }
+5% { transform: rotate(34deg); }
+7% { transform: rotate(-32deg); }
+9% { transform: rotate(30deg); }
+11% { transform: rotate(-28deg); }
+13% { transform: rotate(26deg); }
+15% { transform: rotate(-24deg); }
+17% { transform: rotate(22deg); }
+19% { transform: rotate(-20deg); }
+21% { transform: rotate(18deg); }
+23% { transform: rotate(-16deg); }
+25% { transform: rotate(14deg); }
+27% { transform: rotate(-12deg); }
+29% { transform: rotate(10deg); }
+31% { transform: rotate(-8deg); }
+33% { transform: rotate(6deg); }
+35% { transform: rotate(-4deg); }
+37% { transform: rotate(2deg); }
+39% { transform: rotate(-1deg); }
+41% { transform: rotate(1deg); }
+43% { transform: rotate(0); }
+100% { transform: rotate(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class='subscribe no-items section' id='subscribe'></div>
+<div id='ignielSubscribe'>
+<div class='email__'>
+<div class='email'>
+      Dapatkan artikel terbaru setiap hari
+      <form action='https://feedburner.google.com/fb/a/mailverify?uri=difinmedia' method='post' onsubmit='window.open(&#39;https://feedburner.google.com/fb/a/mailverify?uri=difinmedia&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true' target='popupwindow'>
+<input class='email' name='email' placeholder='Contoh: nama@mail.com'/>
+<input name='uri' type='hidden' value='igniel'/>
+<input name='loc' type='hidden' value='en_US'/>
+<button type='submit'></button>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>
